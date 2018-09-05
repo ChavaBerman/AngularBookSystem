@@ -19,4 +19,4 @@ npm start
 ```
 
 ##### See live demo:
-https://fierce-eyrie-49151.herokuapp.com
+https://fierce-eyrie-49151.herokuapp.com/Book-Store
