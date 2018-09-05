@@ -10,21 +10,21 @@ import { RegisterComponent } from './components/main-components/account/register
 import { ProductPreviewComponent } from './components/main-components/products/product-preview/product-preview.component';
 
 const routes: Routes = [
-    { path: 'book/home', component: HomeComponent },
+    { path: 'Book-Store/home', component: HomeComponent },
     {
-        path: 'book/account', component: AccountComponent, children: [
+        path: 'Book-Store/account', component: AccountComponent, children: [
             { path: 'login', component: LoginComponent },
             { path: 'register', component: RegisterComponent }
         ]
     },
     {
-        path: 'book/products', component: ProductsComponent, children: [
+        path: 'Book-Store/products', component: ProductsComponent, children: [
             { path: 'product-preview', component: ProductPreviewComponent },
-            { path: 'product-details', component: ProductDetailsComponent },
         ]
     },
-    { path: 'book/cart', component: CartComponent, canActivate: [AuthGuard] },
-    { path: 'book/**', redirectTo: 'home' }
+    { path: 'Book-Store/product-details', component: ProductDetailsComponent },
+    { path: 'Book-Store/cart', component: CartComponent, canActivate: [AuthGuard] },
+    { path: '**', redirectTo: 'Book-Store/home' }
 ];
 export const routing = RouterModule.forRoot(routes);
 

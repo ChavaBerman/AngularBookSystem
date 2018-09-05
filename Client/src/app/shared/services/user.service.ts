@@ -23,7 +23,7 @@ export class UserService {
         password: password
       }
     }
-    return this.http.get('http://localhost:3500/api/login', config);
+    return this.http.get('https://fierce-eyrie-49151.herokuapp.com/api/login', config);
 
   }
 
@@ -35,12 +35,12 @@ export class UserService {
       .next(undefined);
   }
   register(newuser) {
-    return this.http.post("http://localhost:3500/api/register", JSON.parse(newuser));
+    return this.http.post("https://fierce-eyrie-49151.herokuapp.com/api/register", JSON.parse(newuser));
   }
   logUserIn(res): any {
     localStorage.setItem("currentuser", JSON.stringify(res));
     localStorage.setItem("cart",JSON.stringify([]));
-    this.router.navigate(["/book/home"]);
+    this.router.navigate(["/Book-Store/home"]);
     this.subjectUser
       .next(JSON.parse(localStorage.getItem("currentuser")));
   }

@@ -19,7 +19,7 @@ export class ProductPreviewComponent  {
   
   transforInfo()
   {
-    this.router.navigate(['/book/products/product-details']);
+    this.router.navigate(['/Book-Store/product-details']);
     this.bookservice.book=this.book;
       
   }

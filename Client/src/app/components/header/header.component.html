@@ -2,10 +2,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <nav id="nav-1">
-  <a class="link-1" [routerLink]="['/book/home']">home</a>
-  <a class="link-1" [routerLink]="['/book/account']">my account</a>
-  <a class="link-1" [routerLink]="['/book/products']">products</a>
-  <a class="link-1" [routerLink]="['/book/cart']" *ngIf="currentuser">my cart</a>
+  <a class="link-1" [routerLink]="['/Book-Store/home']">home</a>
+  <a class="link-1" [routerLink]="['/Book-Store/account']">my account</a>
+  <a class="link-1" [routerLink]="['/Book-Store/products']">products</a>
+  <a class="link-1" [routerLink]="['/Book-Store/cart']" *ngIf="currentuser">my cart</a>
   <span>Hello {{currentuser?currentuser.username:"guest"}}</span>
 
     <svg  id="userProfile" aria-hidden="true" data-prefix="fas" data-icon="user-circle" class="svg-inline--fa fa-user-circle fa-w-16" role="img"
