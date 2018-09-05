@@ -1,0 +1,13 @@
+img{
+    width: 40%;
+    border-radius: 100%;
+}
+#container{
+    position: fixed;
+    left: 0%;
+    right: 0px;
+    bottom: 20%;
+    text-align: center;
+
+
+}

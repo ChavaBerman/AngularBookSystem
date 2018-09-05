@@ -1,0 +1,15 @@
+
+  <div class="catCard"><a href="#"><img src="http://placehold.it/221x200" alt=""></a>
+  <div class="lowerCatCard">
+  <h3>{{book.title}}</h3>
+  <div class="startingPrice">{{book.subtitle}}<span>{{book.publishedDate}}</span></div>
+  <p  *ngIf="book.description">{{book.description}}</p>
+  <h4>Best Used For:</h4>
+  <ul>
+  <li>Eating Bacon</li>
+  <li>Cooking Bacon</li>
+  </ul>
+  <div id="catCardButton" class="button" (click)="transforInfo()">View Product</div>
+  </div>
+  </div>
+

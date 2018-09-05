@@ -1,0 +1,25 @@
+<div class="register">
+  <div class="register-triangle"></div>
+  
+  <h2 class="register-header">Register</h2>
+
+  <form  [formGroup]="registerForm" class="register-container" (ngSubmit)="onSubmit()">
+    <p><input type="text" placeholder="first-name" formControlName="firstname" [ngClass]="{'is-invalid': submitted && formControls.username.errors}" ></p>
+    <div *ngIf="registerForm.controls['firstname'].errors">
+      <p *ngFor="let err of obj.values(registerForm.controls['firstname'].errors)">{{err}}</p>
+    </div>
+    <p><input type="text" placeholder="last-name" formControlName="lastname" [ngClass]="{'is-invalid': submitted && formControls.username.errors}" ></p>
+    <div *ngIf="registerForm.controls['lastname'].errors">
+      <p *ngFor="let err of obj.values(registerForm.controls['lastname'].errors)">{{err}}</p>
+    </div>
+    <p><input type="text" placeholder="user-name" formControlName="username" [ngClass]="{'is-invalid': submitted && formControls.username.errors}" ></p>
+    <div *ngIf="registerForm.controls['username'].errors">
+      <p *ngFor="let err of obj.values(registerForm.controls['username'].errors)">{{err}}</p>
+    </div>
+    <p><input type="password" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid': submitted && formControls.username.errors}" ></p>
+    <div *ngIf="registerForm.controls['password'].errors">
+      <p *ngFor="let err of obj.values(registerForm.controls['password'].errors)">{{err}}</p>
+    </div>
+    <p><input type="submit" value="Register"></p>
+  </form>
+</div>

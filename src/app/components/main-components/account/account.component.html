@@ -1,0 +1,6 @@
+<nav id="nav">
+  <a class="link" [routerLink]="['/book/account/login']"  *ngIf="!currentuser"> Login</a>
+  <a class="link" [routerLink]="['/book/account/register']" *ngIf="!currentuser">Register</a>
+  <a class="link" (click)="logOut()" *ngIf="currentuser">Log-out</a>
+</nav>
+<router-outlet></router-outlet>

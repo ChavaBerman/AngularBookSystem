@@ -1,0 +1,9 @@
+<div id="all">
+  <input type="text" (blur)="getBooksList()" [(ngModel)]="filterString"/>
+  <div id="line"></div>
+</div>
+  <ul *ngIf="list">
+    <li *ngFor="let book of list['items']" class="catCardList">
+      <app-product-preview [book]="book.volumeInfo"></app-product-preview>
+    </li>
+  </ul>
